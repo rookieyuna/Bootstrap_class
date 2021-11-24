@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoardList.html</title>
+    <title>BoardView.html</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -91,82 +91,62 @@
         <!-- 오른쪽게시판 -->
         <div class="col-lg-9 my-4 mb-4">
             <div class="my-4">
-            <h3>게시판 목록<small class="text-secondary" style="font-size: 0.7em;"> 
+            <h3>게시판 내용보기<small class="text-secondary" style="font-size: 0.7em;"> 
                 - 자유게시판</small></h3>
             </div>
             <!-- 내용검색창 -->
-            <div class="my-4 col-sm-6 ms-auto">
-                <form class=" mx-3">
-                    <div class="input-group text-end" >
-                        <select class="border border-light" style="width: 80px;"> 
-                            <option>제목</option>
-                            <option>작성자</option>
-                            <option>작성일</option>
-                          </select>
-                        <input type="text" class="form-control" style="height: 35px; margin-top: 1px;" size="50px">
-                        <button class="btn btn-warning" type="submit" style="height: 35px;"><i class="bi-search"></i></button>
-                    </div>
-                </form>
-            </div>
-            <table class="table">
-                <tr class="table-success text-center">
-                    <th>번호</th>
-                    <th class="text-start">제목</th>
+            <table class="table table-striped table-bordered table-hover">
+                <colgroup>
+                    <col style="width: 20%;" >
+                    <col style="width: 30%;">
+                    <col style="width: 20%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tr>
                     <th>작성자</th>
+                    <td>
+                        루키
+                    </td>
                     <th>작성일</th>
+                    <td>
+                        2021-11-24
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td>
+                        syjakk@naver.com
+                    </td>
                     <th>조회수</th>
-                    <th>첨부</th>
+                    <td>
+                        18434
+                    </td>
                 </tr>
-                <tr class="text-center">
-                    <td>10</td>
-                    <td class="text-start">즐거운 오늘의 일기쓰기</td>
-                    <td>루키</td>
-                    <td>2021-11-23</td>
-                    <td>109</td>
-                    <td><i class="bi bi-sticky-fill"></i></td>
+                <tr >
+                    <th>제목</th>
+                    <td colspan="3">
+                        즐거운 오늘의 일기
+                    </td>
                 </tr>
-                <tr class="text-center">
-                    <td>9</td>
-                    <td class="text-start">즐거운 오늘의 일기쓰기</td>
-                    <td>루키</td>
-                    <td>2021-11-22</td>
-                    <td>131</td>
-                    <td><i class="bi bi-sticky-fill"></i></td>
+                <tr>
+                    <th >내용</th>
+                    <td colspan="3" >
+                        간식먹었다.<br>
+                        신난다.<br>
+                        졸리다.<br>
+                        내일도 먹고싶다.<br>
+                        노는게 제일좋아.
+                    </td>
                 </tr>
-                <tr class="text-center">
-                    <td>8</td>
-                    <td class="text-start">즐거운 오늘의 일기쓰기</td>
-                    <td>루키</td>
-                    <td>2021-11-21</td>
-                    <td>140</td>
-                    <td><i class="bi bi-sticky-fill"></i></td>
+                <tr>
+                    <th>첨부파일</th>
+                    <td>
+                        파일명.jpg
+                    </td>
                 </tr>
-                <tr class="text-center">
-                    <td>7</td>
-                    <td class="text-start">즐거운 오늘의 일기쓰기</td>
-                    <td>루키</td>
-                    <td>2021-11-20</td>
-                    <td>203</td>
-                    <td><i class="bi bi-sticky-fill"></i></td>
-                </tr>
-                <tr class="text-center">
-                    <td>6</td>
-                    <td class="text-start">즐거운 오늘의 일기쓰기</td>
-                    <td>루키</td>
-                    <td>2021-11-19</td>
-                    <td>91</td>
-                    <td><i class="bi bi-sticky-fill"></i></td>
-                </tr>
-                <tr class="text-center">
-                    <td>5</td>
-                    <td class="text-start">즐거운 오늘의 일기쓰기</td>
-                    <td>루키</td>
-                    <td>2021-11-18</td>
-                    <td>88</td>
-                    <td><i class="bi bi-sticky-fill"></i></td>
-                </tr>
+
             </table>
-            <div class="text-end">
+            <div class="text-start">
                 <button type="button" class="btn btn-sm btn-outline-secondary">Reset</button>
                 <button type="button" class="btn btn-sm btn-dark">글쓰기</button>
                 <button type="button" class="btn btn-sm btn-primary ">수정하기</button>
@@ -175,28 +155,6 @@
                 <button type="button" class="btn btn-sm btn-warning">리스트보기</button>
                 <button type="button" class="btn btn-sm btn-danger">전송하기</button>
             </div>
-
-            <!-- pagination -->
-            <ul class="pagination justify-content-center" style="margin:20px 0">
-                <li class="page-item"><a class="page-link" href="#">
-                    <i class="bi bi-arrow-bar-left"></i>
-                </a></li>
-                <li class="page-item"><a class="page-link" href="#">
-                    <i class="bi bi-caret-left-fill"></i>
-                </a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#">
-                    <i class="bi bi-caret-right-fill"></i>
-                </a></li>
-                <li class="page-item"><a class="page-link" href="#">
-                    <i class="bi bi-arrow-bar-right"></i>
-                </a></li>
-            </ul>
-
         </div>
         <!-- 오른쪽게시판끝 -->
     </div>
